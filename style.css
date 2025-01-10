@@ -3,10 +3,48 @@
     padding: 0;
 }
 
-.classbg{
-    background-color:burlywood;
+
+video{
+    height: 150px;
 }
 
+button{
+    background-color: brown !important;
+}
+
+input,select{
+    border: 1px solid brown !important;
+}
+label{
+    color: brown;
+    font-weight: bold;
+}
+
+.greeting-page{
+    height: 50vh;
+    width: 100%;
+}
+
+.greeting-page h6{
+    padding: 10px;
+}
+
+
+
+@media only screen and (max-width: 767px){
+    .icon{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .icontext h1{
+        font-size: 20px;
+    }
+    .icontext h3{
+        font-size: 15px;
+    }
+}
 
 
 

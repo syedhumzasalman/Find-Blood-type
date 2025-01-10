@@ -8,12 +8,29 @@
     <link rel="stylesheet" href="boostrap.css" />
   </head>
   <body>
-    <div class="container-fluid classbg">
+    <div class="container-fluid">
       <div class="container">
+        <div class="icon d-flex justify-content-center align-items-center">
+          <div class="icontext">
+            <h1 class="text-center text-danger">CHECK YOUR BLOOD TYPE</h1>
+            <h3 class="text-center text-danger">
+              to see which Blood Group Suits you
+            </h3>
+          </div>
+          <div>
+            <video
+              autoplay
+              loop
+              muted
+              src="Videos/Blood Donation 2.mp4"
+              type="video/mp4"
+            ></video>
+          </div>
+        </div>
         <div class="row g-3">
           <div class="col-md-6">
             <label for="firstName" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstName" />
+            <input type="text" class="form-control" id="firstName" required />
           </div>
           <div class="col-md-6">
             <label for="lastName" class="form-label">Last Name</label>
@@ -39,47 +56,60 @@
           <div class="col-12">
             <div class="form-check">
               <label for="male" class="form-check-label"> Male </label>
-              <input class="form-check-input" name="gender" type="radio" id="male" checked />
+              <input
+                class="form-check-input"
+                name="gender"
+                type="radio"
+                id="male"
+                checked
+              />
             </div>
             <div class="form-check">
               <label for="female" class="form-check-label"> Female </label>
-              <input class="form-check-input" name="gender" type="radio" id="female" />
+              <input
+                class="form-check-input"
+                name="gender"
+                type="radio"
+                id="female"
+              />
             </div>
           </div>
 
           <div class="col-12">
-            <label for="blood" class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-            <select id="blood" class="form-select" id="inlineFormSelectPref">
+            <label for="blood" class="visually-hidden">Preference</label>
+            <select id="blood" class="form-select">
               <option selected>Chose your Blood Type</option>
               <option value="1">O-</option>
               <option value="2">O+</option>
-              <option value="4">A+</option>
+              <option value="3">B-</option>
+              <option value="4">B+</option>
               <option value="5">A-</option>
-              <option value="6">B+</option>
-              <option value="7">B-</option>
+              <option value="6">A+</option>
+              <option value="7">AB-</option>
               <option value="8">AB+</option>
-              <option value="9">AB-</option>
             </select>
           </div>
 
           <div class="col-12">
-            <button type="submit" class="btn btn-primary" onclick="result('')">Submit</button>
+            <button type="submit" class="btn btn-danger" onclick="result('')">
+              Submit
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-
-    <div>
-     <p id="greeting1"></p>
-     <p id="greeting2"></p>
-     <p id="greeting3"></p>
-     <p id="greeting4"></p>
-     <p id="greeting5"></p>
-     <p id="bloodType"></p>
-     <p id="gender"></p>
+    <div class="container mt-3">
+      <div class="greeting-page">
+        <h6 id="greeting1"></h6>
+        <h6 id="greeting2"></h6>
+        <h6 id="greeting3"></h6>
+        <h6 id="greeting4"></h6>
+        <h6 id="greeting5"></h6>
+        <h6 id="gender"></h6>
+        <h6 id="bloodtypeshow"></h6>
+      </div>
     </div>
-
 
     <script src="app.js"></script>
     <script
